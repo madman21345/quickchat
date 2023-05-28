@@ -1,0 +1,75 @@
+
+body {
+    margin: 0;
+    background: #dee7ff77;
+    font-size: 18px;
+    height: 100vh;
+
+}
+
+.container {
+    margin: 1em;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 1em;
+
+    .left{
+        margin: 1em;
+        text-align: center;
+        
+        .logo{
+            text-align: left;
+            width: 120px;
+        }
+
+        .user{
+            border-radius: 1em;
+            background: #dee7ff77;
+            .me{
+                margin-top: 1em;
+                border-radius: 50%;
+            }
+        }
+        .active{
+
+        }
+        .archived{
+
+        }
+    }
+    
+    .mid{
+        margin: 1em 0 1em;
+        text-align: center;
+        border-radius: 1em;
+        background: #dee7ff77;
+        
+        .conversation{
+            margin: 1em .5em;
+            display:block;
+            height: 80vh;
+            overflow:hidden;
+        }
+    }
+
+    .right{
+        margin: 1em;
+
+        .current{
+            border-radius: 1em;
+            background: #dee7ff77;
+            .avatar{
+                margin-top: 1em;
+                border-radius: 50%;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+    }
+}
