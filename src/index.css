@@ -1,31 +1,60 @@
 body {
   margin: 0;
-  background: rgba(222, 231, 255, 0.4666666667);
+  background: rgba(222, 231, 255, 0.3333333333);
   font-size: 18px;
   height: 100vh;
 }
 
 .container {
   margin: 1em;
-  text-align: center;
   background: #ffffff;
   border-radius: 1em;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1333333333);
 }
 .container .left {
   margin: 1em;
-  text-align: center;
 }
 .container .left .logo {
-  text-align: left;
+  margin: 0.5em 0;
   width: 120px;
 }
 .container .left .user {
   border-radius: 1em;
   background: rgba(222, 231, 255, 0.4666666667);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1333333333);
+  padding: 0.5em;
+  text-align: center;
 }
 .container .left .user .me {
   margin-top: 1em;
   border-radius: 50%;
+}
+.container .left .user .name {
+  font-weight: bold;
+}
+.container .left .user .name button {
+  margin: 0 0.5em;
+  color: black;
+  background: rgba(222, 231, 255, 0);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.container .left .user .desc {
+  font-size: 16px;
+  color: #7e7e7e;
+}
+.container .left .user .status {
+  font-size: 12px;
+  color: #7e7e7e;
+}
+.container .left .user .status button {
+  margin: 0 0.5em;
+  color: green;
+  background: green;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 .container .mid {
   margin: 1em 0 1em;
@@ -36,19 +65,64 @@ body {
 .container .mid .conversation {
   margin: 1em 0.5em;
   display: block;
-  height: 80vh;
+  height: 75vh;
   overflow: hidden;
+}
+.container .mid .message {
+  background: rgba(255, 255, 255, 0.6588235294);
+  padding: 0.6em 0.2em;
+  margin: 1em 0.5em;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1333333333);
+}
+.container .mid .message input, .container .mid .message button {
+  padding: 0.8em;
+  margin: 0.2em 0.4em;
+}
+.container .mid .message input {
+  width: calc(100% - 12em);
+  border: 1px outset rgba(0, 0, 0, 0.2666666667);
+}
+.container .mid .message button {
+  background: #1234dd;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.container .mid .message .attach {
+  background: none;
+  color: grey;
+  border-radius: 10px;
+  border: none;
 }
 .container .right {
   margin: 1em;
+  text-align: center;
 }
 .container .right .current {
   border-radius: 1em;
   background: rgba(222, 231, 255, 0.4666666667);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1333333333);
 }
 .container .right .current .avatar {
   margin-top: 1em;
   border-radius: 50%;
+}
+.container .right .current .name {
+  font-size: 16px;
+  color: #7e7e7e;
+}
+.container .right .current .email {
+  font-size: 16px;
+  color: #7e7e7e;
+}
+.container .right .current button {
+  background: white;
+  color: #1234dd;
+  border-radius: 10px;
+  border: 1px solid #1234dd;
+  padding: 0.5em;
 }
 
 @media only screen and (min-width: 600px) {

@@ -12,29 +12,30 @@
   <div class="container">
     <div class="left">
       <img src="/logo.jpg" alt="LOGO" class="logo">
-      <div class="user">
-        <img src="/avatar.jpg" alt="AVATAR" class="me">
-        <p class="name">NAME</p>
-        <p class="desc">DESCRIPTION</p>
-        <p class="status">STATUS</p>
-      </div>
-      <div class="active">
-        <p>ACTIVE CONVERSATIONS</p>
-      </div>
-      <div class="archived">
-        <p>ARCHIVED CONVERSATIONS</p>
+      <div class="real">
+        <div class="user">
+          <img src="/avatar.jpg" alt="AVATAR" class="me">
+          <p class="name">NAME<button>cog</button></p>
+          <p class="desc">DESCRIPTION</p>
+          <p class="status"><button>.</button>STATUS</p>
+        </div>
+        <div class="active">
+          <p>ACTIVE CONVERSATIONS</p>
+        </div>
+        <div class="archived">
+          <p>ARCHIVED CONVERSATIONS</p>
+        </div>
       </div>
     </div>
 
     <div class="mid">
       <div class="conversation">
-        
-        <div class="message">
-          <input type="text" name="message" id="message" placeholder="Enter your message here.">
-        </div>
 
       </div>
-
+      
+      <div class="message">
+        <button class="attach">clip</button><input type="text" name="message" id="message" placeholder="Enter your message here."><button>SEND</button>
+      </div>
       
     </div>
 
@@ -42,7 +43,7 @@
       <div class="current">
         <img src="/avatar.jpg" alt="AVATAR" class="avatar">
         <p class="name">NAME</p>
-        <p class="email">DESCRIPTION</p>
+        <p class="email">EMAIL</p>
         <button>ARCHIVE</button>
       </div>
     </div>
