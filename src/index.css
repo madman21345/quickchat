@@ -227,6 +227,7 @@ body {
   border-radius: 10px;
   border: 1px solid #1234dd;
   padding: 0.5em;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) {
