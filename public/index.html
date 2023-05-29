@@ -19,22 +19,45 @@
           <p class="desc">DESCRIPTION</p>
           <p class="status"><button class="stus">.</button>STATUS</p>
         </div>
+
         <div class="active">
-          <p>ACTIVE CONVERSATIONS</p>
+          <p>ACTIVE CONVERSATIONS<button class="dropdown-toggle" id="activeButton">▼</button></p>
+          <div class="dropdown-list" id="activeList">
+            <ul>
+              <li>Conversation 1</li>
+              <li>Conversation 2</li>
+              <li>Conversation 3</li>
+            </ul>
+          </div>
         </div>
+
         <div class="archived">
-          <p>ARCHIVED CONVERSATIONS</p>
+          <p>ARCHIVED CONVERSATIONS<button class="dropdown-toggle" id="archiveButton">▼</button></p>
+          <div class="dropdown-list" id="archiveList">
+            <ul>
+              <li>Archive 1</li>
+              <li>Archive 2</li>
+              <li>Archive 3</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="mid">
       <div class="conversation">
-
+        <div class="messages">
+          <div class="out">
+            <p>Thanks buddy, you too as well</p>
+          </div>
+          <div class="in">
+            <p>Have a great Day!</p>
+          </div>
+        </div>
       </div>
       
       <div class="message">
-        <button class="attach">clip</button><input type="text" name="message" id="message" placeholder="Enter your message here."><button>SEND</button>
+        <button class="attach">clip</button><input type="text" name="message" id="message" placeholder="Enter your message here."><button id="send">SEND</button>
       </div>
       
     </div>
@@ -62,6 +85,49 @@
         status.classList.add('red');
       }
     });
+
+    //new message
+    const messageInput = document.getElementById('message');
+    const sendButton = document.getElementById('send');
+    const messageContainer = document.querySelector('.messages');
+
+    function sendMessage() {
+      const messageText = messageInput.value.trim();
+      if (messageText !== '') {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('out');
+        messageElement.innerHTML = `<p>${messageText}</p>`;
+        messageContainer.prepend(messageElement);
+        messageInput.value = '';
+      }
+    }
+
+    //on enter press or press send
+    sendButton.addEventListener('click', sendMessage);
+    messageInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    // toggle active conversations dropdown
+    const activeButton = document.getElementById('activeButton');
+    const activeList = document.getElementById('activeList');
+
+    activeButton.addEventListener('click', function() {
+      activeList.classList.toggle('show');
+      activeButton.classList.toggle('opened');
+    });
+
+    // toggle archived conversations dropdown
+    const archiveButton = document.getElementById('archiveButton');
+    const archiveList = document.getElementById('archiveList');
+
+    archiveButton.addEventListener('click', function() {
+      archiveList.classList.toggle('show');
+      archiveButton.classList.toggle('opened');
+    });
+
   </script>
 </body>
 </html>
