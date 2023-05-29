@@ -15,7 +15,7 @@
       <div class="real">
         <div class="user">
           <img src="/avatar.jpg" alt="AVATAR" class="me">
-          <p class="name">NAME<button>cog</button></p>
+          <p class="name">NAME<button class="cog">cog</button></p>
           <p class="desc">DESCRIPTION</p>
           <p class="status"><button class="stus">.</button>STATUS</p>
         </div>
@@ -42,12 +42,26 @@
     <div class="right">
       <div class="current">
         <img src="/avatar.jpg" alt="AVATAR" class="avatar">
-        <p class="name">NAME</p>
-        <p class="email">EMAIL</p>
+        <div class="content">
+          <p class="name">NAME</p>
+          <p class="email">EMAIL</p>
+        </div>
         <button>ARCHIVE</button>
       </div>
     </div>
   </div>
   
+  <script >
+    //status button
+    const status = document.querySelector('.stus');
+
+    status.addEventListener('click', function() {
+      if (status.classList.contains('red')) {
+        status.classList.remove('red');
+      } else {
+        status.classList.add('red');
+      }
+    });
+  </script>
 </body>
 </html>

@@ -56,6 +56,10 @@ body {
   border: none;
   cursor: pointer;
 }
+.container .left .user .status button.red {
+  color: red;
+  background: red;
+}
 .container .mid {
   margin: 1em 0 1em;
   text-align: center;
@@ -104,16 +108,21 @@ body {
   border-radius: 1em;
   background: rgba(222, 231, 255, 0.4666666667);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1333333333);
+  padding: 1em;
 }
 .container .right .current .avatar {
   margin-top: 1em;
   border-radius: 50%;
 }
-.container .right .current .name {
+.container .right .current .content {
+  text-align: left;
+  margin: 0 3em;
+}
+.container .right .current .content .name {
   font-size: 16px;
   color: #7e7e7e;
 }
-.container .right .current .email {
+.container .right .current .content .email {
   font-size: 16px;
   color: #7e7e7e;
 }
